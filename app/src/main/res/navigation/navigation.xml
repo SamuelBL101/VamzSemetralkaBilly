@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/home2">
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.fitnesssemestralka.Profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profile_to_profileSettings"
+            app:destination="@id/profileSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/home2"
+        android:name="com.example.fitnesssemestralka.Home"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_home2_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_home2_to_plansShow"
+            app:destination="@id/plansShow" />
+        <action
+            android:id="@+id/action_home2_to_startPlans"
+            app:destination="@id/startPlans" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileSettings"
+        android:name="com.example.fitnesssemestralka.ProfileSettings"
+        android:label="fragment_profile_settings"
+        tools:layout="@layout/fragment_profile_settings" >
+        <action
+            android:id="@+id/action_profileSettings_to_profile"
+            app:destination="@id/profile" />
+    </fragment>
+    <fragment
+        android:id="@+id/plansShow"
+        android:name="com.example.fitnesssemestralka.PlansShow"
+        android:label="fragment_plans_show"
+        tools:layout="@layout/fragment_plans_show" >
+        <action
+            android:id="@+id/action_plansShow_to_exerciseListFragment"
+            app:destination="@id/exerciseListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseListFragment"
+        android:name="com.example.fitnesssemestralka.ExerciseListFragment"
+        android:label="fragment_exercise_list"
+        tools:layout="@layout/fragment_exercise_list" />
+    <fragment
+        android:id="@+id/exerciseListAdapter"
+        android:name="com.example.fitnesssemestralka.ExerciseAdapter"
+        android:label="fragment_exercise_list_adapter"
+        tools:layout="@layout/fragment_exercise_list_adapter" />
+    <fragment
+        android:id="@+id/startPlans"
+        android:name="com.example.fitnesssemestralka.StartPlans"
+        android:label="fragment_start_plans"
+        tools:layout="@layout/fragment_start_plans" >
+        <action
+            android:id="@+id/action_startPlans_to_exerciseDetailsFragment"
+            app:destination="@id/exerciseDetailsFragment" >
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseDetailsFragment"
+        android:name="com.example.fitnesssemestralka.ExerciseDetailsFragment"
+        android:label="fragment_exercise_details"
+        tools:layout="@layout/fragment_exercise_details" >
+        <action
+            android:id="@+id/action_exerciseDetailsFragment_to_afterWorkou"
+            app:destination="@id/afterWorkou" />
+    </fragment>
+    <fragment
+        android:id="@+id/afterWorkou"
+        android:name="com.example.fitnesssemestralka.AfterWorkout"
+        android:label="fragment_after_workou"
+        tools:layout="@layout/fragment_after_workou" />
+    <fragment
+        android:id="@+id/statsProfile"
+        android:name="com.example.fitnesssemestralka.StatsProfile"
+        android:label="fragment_stats_profile"
+        tools:layout="@layout/fragment_stats_profile" />
+    <fragment
+        android:id="@+id/detailsExercise"
+        android:name="com.example.fitnesssemestralka.DetailsExercise"
+        android:label="fragment_details_exercise"
+        tools:layout="@layout/fragment_details_exercise" />
+
+</navigation>
